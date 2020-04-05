@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/signin">Sign In</router-link>
+      <router-link to="/">Home</router-link>
+      <span v-if="$store.state.user === null">
+        | <router-link to="/signin">Sign In</router-link>
+      </span>
+      <span v-else>| <router-link to="/signout">Sign Out</router-link></span>
     </div>
     <router-view />
   </div>

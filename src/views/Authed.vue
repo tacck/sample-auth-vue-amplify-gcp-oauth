@@ -3,7 +3,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted: function() {
+    setTimeout(() => {
+      this.$router.push('/')
+    }, 1000)
+  },
+}
 </script>
 
 <style></style>
